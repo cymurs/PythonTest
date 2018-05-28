@@ -21,5 +21,11 @@
 4. 为PyCharm配置GitHub的版本控制。
 首先，要访问github，需要翻墙，在**设置—>外观和行为—>常规—>HTTP Proxy**中选中**使用代理—>SOCKS**，填入主机名和端口号（比如本人设置**127.0.0.1**和**1080**），点击**Check connection**验证，随便输入一个网址，比如www.baidu.com，弹出**Connection successful**的窗口，表明代理设置成功；
 其次，在**设置—>版本控制—>GitHub**中Host填写**github.com**，选择Auth Type为**Password**，然后输入用户名和密码，点击**Test**进行验证，弹出**Connection successful**的对话框，表明设置成功。
+5. 运行`scrapy shell 'http://scrapy.org'`时，报错`ValueError: invalid hostname: 'http`。
+只需把**单引号**改为**双引号**即可。
+6. 爬取https网页并翻墙，以`scrapy shell`为例
+*>>>* `data = scrapy.Request("https://support.binance.com/hc/zh-cn/sections/115000106672-%E6%96%B0%E5%B8%81%E4%B8%8A%E7%BA%BF", headers={"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36"}, meta={"proxy":"http://127.0.0.1:1080"})`
+*>>>* `fetch(data)`
+其中，**User-Agent** 获取https网页，**proxy**设置代理翻墙。
 
 
