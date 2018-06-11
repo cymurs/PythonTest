@@ -16,7 +16,7 @@ Scrapy
 		pip install Twisted-18.4.0-cp36-cp36m-win_amd64.whl // pip install Twisted==18.4.0
 		pip install w3lib==1.19.0
 		pip install Scrapy==1.5.0
-
+		pip install Django==2.1a1
 
 
 
